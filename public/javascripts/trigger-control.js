@@ -1,13 +1,5 @@
 function showTrigger(){
-	$('#trigger').show();
-	$( "#trigger" ).dialog({
-		resizable: false,
-		height: 'auto',
-		width: 'auto',
-		position: { my: "left top", at: "left+20 top+20"},
-		modal: true
-		});
-	
+	$('#trigger').jqmShow();
 };
 function configTrigger(){
 	$('#map-canvas').hide();
@@ -22,15 +14,18 @@ function showCustomTrigger(){
 	$('#show-text').show();
 };
 function showTimeTrigger(){
-	$('#show-text').html('Exact Time: <input id="trigger-exact-time"/>'
+	$('#show-text').html('<label for="trigger-exact-time">Exact Time:</label>'
+	+'<input id="trigger-exact-time"/>'
 	+'<br/>'
-	+'Epoch Time: <input id="trigger-epoch-time"/>');
+	+'<label for="trigger-epoch-time">Epoch Time:</label>'
+	+'<input id="trigger-epoch-time"/>');
 	$('#show-text').show();
 };
 function showGeoTrigger(){
 	displayInfo(distanceWidget);
 	$('#show-text').show();
 	$('#map-canvas').show();
+	$('#map-canvas').height(screen.height*0.5);
 	google.maps.event.trigger(map, 'resize');
 	map.setCenter(distanceWidget.get('position'));
 	

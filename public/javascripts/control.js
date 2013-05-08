@@ -73,7 +73,7 @@
         {
 	    if (property.otherInput === true){
 		$advancedList.append("<li><div class='text' data-name='trigger'><h4>Trigger</h4><p>Specify trigger type and input parameters.</p><input type='text' class='editorTextfield' id='property_Trigger'>"
-			+"<input type='button' value='Config Trigger' onclick=\"showTrigger();\""
+			+"<input type='button' value='Config Trigger' onclick=\"showTrigger();\"/>"
 			+"</div></li>"
 		);
 	    }else{
