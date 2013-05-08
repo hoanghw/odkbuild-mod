@@ -71,9 +71,17 @@
         // add our hero's properties
         _.each(properties, function(property, name)
         {
+	    if (property.otherInput === true){
+		$advancedList.append("<li><div class='text' data-name='trigger'><h4>Trigger</h4><p>Specify trigger type and input parameters.</p><input type='text' class='editorTextfield' id='property_Trigger'>"
+			+"<input type='button' value='Config Trigger' onclick=\"showTrigger();\""
+			+"</div></li>"
+		);
+	    }else{
             $('<li/>')
                 .propertyEditor(property, name, $this)
                 .appendTo((property.advanced === true) ? $advancedList : $propertyList);
+	    }
+		
         });
 
 		// drop in advanced
@@ -259,7 +267,14 @@
                         description: 'Specify a custom expression to store a value in this field',
                         value: '',
                         advanced: true,
-                        summary: false }
+                        summary: false },
+	trigger:  { name: 'Trigger',
+			type: 'text',
+			description: 'Specify trigger type and input parameters',
+			value: '',
+			advanced: true,
+			otherInput: true,
+			summary: false }
     };
 
     // Property fields per control type
