@@ -15,10 +15,10 @@ function showCustomTrigger(){
 };
 function showTimeTrigger(){
 	$('#show-text').html('<label for="trigger-exact">Exact Time:</label>'
-	+'<input id="trigger-exact"/>'
+	+'<input id="trigger-exact" value="0"/>'
 	+'<br/>'
 	+'<label for="trigger-epoch">Epoch Time:</label>'
-	+'<input id="trigger-epoch"/>');
+	+'<input id="trigger-epoch" value="0"/>');
 	$('#show-text').show();
 };
 function showGeoTrigger(){
