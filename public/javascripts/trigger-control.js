@@ -42,5 +42,6 @@ function setTrigger(){
                        );
        else
                $('#property_Trigger').val(sel + ' ' +value);
+       $('#property_Trigger').trigger('input');
 };
 
