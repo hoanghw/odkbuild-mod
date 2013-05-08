@@ -23,6 +23,7 @@
       })();
     </script>
   <% end %>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIt_imVNRApGmKagqHM5PLLY-6nQpOQDg&sensor=false"></script>
   </head>
   <body>
     <div class="loadingScreen">
@@ -129,6 +130,20 @@
         </ul>
       </div>
     </div>
+
+<div id="trigger" class="modal">
+<select autocomplete="off" id="trigger-select" onchange="configTrigger();">
+	<option value="" selected="selected">Please pick one trigger...</option>
+	<option value="time">Time</option>
+  	<option value="geofence">Geofence</option>
+  	<option value="custom">Custom</option>
+</select>
+<form action="" id="trigger-form">
+<input type="button" value="SET"/>
+</form>
+<div id="show-text"></div>
+<div id="map-canvas"></div>
+</div>
 
     <div class="modal narrowModal signinDialog">
       <h3>Sign in</h3>
