@@ -3,9 +3,9 @@ text-align: center;
 display: none;
 }
 
-.trigger label{
-display: block;
-width: 120px;
+#trigger label{
+display: inline-block;
+width: 70px;
 }
 /**********
  * COMPAT *
